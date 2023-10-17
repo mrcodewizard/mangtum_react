@@ -1,0 +1,61 @@
+.store-section .nav-tabs {
+   border: none;
+   margin-bottom: 5px;
+}
+.store-section .nav-tabs .nav-link {
+   color: #737373;
+   text-align: center;
+   font-family: Montserrat;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 24px;
+   letter-spacing: 0.2px;
+}
+.store-section .nav-tabs .nav-link.active {
+   color: #f6a92c;
+   background-color: transparent;
+   text-align: left;
+   font-family: Montserrat;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 24px;
+   letter-spacing: 0.2px;
+}
+.store-section .tab-content {
+   margin-top: 30px;
+}
+.store-section .item {
+   width: 20%;
+   margin-bottom: 30px;
+}
+.store-section .pagination .page-item:not(:last-child) {
+   margin-right: 10px;
+}
+.store-section .pagination .page-link,
+.store-section .pagination .page-link:first-child,
+.store-section .pagination .page-link:last-child {
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 0px;
+   color: #f6a92c;
+}
+.store-section .pagination .page-link:first-child span {
+   content: "\e64a";
+   font-family: "themify";
+   font-size: 24px;
+}
+.store-section .pagination .page-link:last-child span {
+   content: "\e63a";
+   font-family: "themify";
+   font-size: 24px;
+}
+.store-section .page-item.active .page-link {
+   background: #F6A92C;
+   border-color: #F6A92C;
+   color: #fff;
+}

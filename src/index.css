@@ -1,0 +1,106 @@
+/* common styles */
+.text-wrap {
+  word-wrap: break-word;
+}
+
+.text-one-line {
+  white-space: nowrap;
+  text-overflow: clip;
+  overflow: hidden;
+}
+
+/* common styles */
+
+.Toastify__toast-enter {
+  animation: Toastify__slideInRight 0.1s;
+}
+
+.Toastify__toast-exit {
+  animation: Toastify__slideOutRight 0.2s;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Default grid for small devices */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.img-size {
+  width: 100%;
+  height: 180px;
+  margin: 0 auto;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.des-container {
+  min-height: 50px;
+}
+
+.product-image {
+  height: 200px;
+}
+
+/* Media query for medium-sized devices */
+@media screen and (min-width: 508px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query for medium-sized devices */
+@media screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media query for large-sized devices */
+@media screen and (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media query for extra-large devices */
+@media screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .img-size {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 auto;
+    /* background-color: rgba(0, 0, 0, 0.384); */
+  }
+}
+
+/* product image */
+.arrow-r-btn,
+.arrow-l-btn {
+  opacity: 0;
+  /* Start with opacity 0 */
+  transition: opacity 0.5s ease;
+  /* Add a transition animation */
+}
+
+.arrow-parent:hover .arrow-r-btn,
+.arrow-parent:hover .arrow-l-btn {
+  display: block;
+  opacity: 1;
+  /* Change opacity to 1 on hover */
+}
+
+/* product image */

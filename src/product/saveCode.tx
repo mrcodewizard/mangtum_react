@@ -1,0 +1,222 @@
+<div
+                                            className={`tab-pane fade accordion-item ${activeTab === "store" ? "active show" : ""
+                                                }`}
+                                            id="store"
+                                            role="tabpanel"
+                                            aria-labelledby="store-tab"
+                                        >
+                                            <div
+                                                id="store"
+                                                className="accordion-collapse collapse show  d-lg-block"
+                                                aria-labelledby="store"
+                                                data-bs-parent="#desTabContent"
+                                            >
+                                                <div className="accordion-body">
+                                                    <div className="description-content">
+                                                        {/* NEW three tabs added start */}
+                                                        <div className="container">
+                                                            <div className="d-flex">
+                                                                <div className="desc-tab desc-tabBG">
+                                                                    <ul
+                                                                        className="nav nav-tabs tm-tab d-flex flex-column"
+                                                                        id="desTabnew"
+                                                                        role="tablist"
+                                                                    >
+                                                                        {singleProduct?.product?.vendor
+                                                                            ?.store_name && (
+                                                                                <li
+                                                                                    className="nav-item"
+                                                                                    role="presentation"
+                                                                                >
+                                                                                    <button
+                                                                                        className={`nav-link ${activeTabNew === "vp"
+                                                                                            ? "active"
+                                                                                            : ""
+                                                                                            }`}
+                                                                                        aria-selected={activeTabNew === "vp"}
+                                                                                        onClick={() =>
+                                                                                            handleTabChangeNew("vp")
+                                                                                        }
+                                                                                    >
+                                                                                        Vendor Information
+                                                                                    </button>
+                                                                                </li>
+                                                                            )}
+                                                                        {storeInfoTab?.vendor?.shipping_policy && (
+                                                                            <li
+                                                                                className="nav-item"
+                                                                                role="presentation"
+                                                                            >
+                                                                                <button
+                                                                                    className={`nav-link ${activeTabNew === "sp"
+                                                                                        ? "active"
+                                                                                        : ""
+                                                                                        }`}
+                                                                                    aria-selected={activeTabNew === "sp"}
+                                                                                    onClick={() =>
+                                                                                        handleTabChangeNew("sp")
+                                                                                    }
+                                                                                >
+                                                                                    Shipping Policy
+                                                                                </button>
+                                                                            </li>
+                                                                        )}
+                                                                        {storeInfoTab?.vendor?.return_policy && (
+                                                                            <li
+                                                                                className="nav-item"
+                                                                                role="presentation"
+                                                                            >
+                                                                                <button
+                                                                                    className={`nav-link ${activeTabNew === "rt"
+                                                                                        ? "active"
+                                                                                        : ""
+                                                                                        }`}
+                                                                                    aria-selected={activeTabNew === "rt"}
+                                                                                    onClick={() =>
+                                                                                        handleTabChangeNew("rt")
+                                                                                    }
+                                                                                >
+                                                                                    Return Policy
+                                                                                </button>
+                                                                            </li>
+                                                                        )}
+                                                                        {storeInfoTab?.vendor?.terms_conditions && (
+                                                                            <li
+                                                                                className="nav-item"
+                                                                                role="presentation"
+                                                                            >
+                                                                                <button
+                                                                                    className={`nav-link ${activeTabNew === "tc"
+                                                                                        ? "active"
+                                                                                        : ""
+                                                                                        }`}
+                                                                                    aria-selected={activeTabNew === "tc"}
+                                                                                    onClick={() =>
+                                                                                        handleTabChangeNew("tc")
+                                                                                    }
+                                                                                >
+                                                                                    Terms & Conditions
+                                                                                </button>
+                                                                            </li>
+                                                                        )}
+                                                                    </ul>
+                                                                </div>
+                                                                <div className="vendorSide desc-tabBG">
+                                                                    <div
+                                                                        id="vp"
+                                                                        className={`desc-tabBG tab-pane fade accordion-item text-alignment ${activeTabNew === "vp"
+                                                                            ? "active show"
+                                                                            : "hide"
+                                                                            }`}
+                                                                    >
+                                                                        <div
+                                                                            id="vp"
+                                                                            className="accordion-collapse collapse show  d-lg-block"
+                                                                            aria-labelledby="vp "
+                                                                            data-bs-parent="#desTabContent"
+                                                                        >
+                                                                            <ul className="list-unstyled">
+                                                                                <li>
+                                                                                    <strong>
+                                                                                        {
+                                                                                            singleProduct?.product?.vendor
+                                                                                                ?.full_name
+                                                                                        }
+                                                                                    </strong>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <strong>
+                                                                                        {
+                                                                                            singleProduct?.product?.vendor
+                                                                                                ?.store_name
+                                                                                        }
+                                                                                    </strong>
+                                                                                </li>
+                                                                                <li>
+                                                                                    {" "}
+                                                                                    <span
+                                                                                        className="productDetailShortdesOne">
+                                                                                        {storeInfoTab?.vendor?.bio}
+                                                                                    </span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        id="sp"
+                                                                        className={`desc-tabBG tab-pane fade accordion-item text-alignment manage-text ${activeTabNew === "sp"
+                                                                            ? "active show"
+                                                                            : "hide"
+                                                                            }`}
+                                                                    >
+                                                                        <div
+                                                                            id="sp"
+                                                                            className="accordion-collapse collapse show  d-lg-block "
+                                                                            aria-labelledby="sp "
+                                                                            data-bs-parent="#desTabContent"
+                                                                        >
+                                                                            <p
+                                                                                className="productDetailShortdesOne"
+                                                                                dangerouslySetInnerHTML={{
+                                                                                    __html: sanitizedTextThree,
+                                                                                }}
+                                                                            ></p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div
+                                                                        id="rt"
+                                                                        className={`desc-tabBG tab-pane fade accordion-item text-alignment manage-text ${activeTabNew === "rt"
+                                                                            ? "active show"
+                                                                            : "hide"
+                                                                            }`}
+                                                                    >
+                                                                        <div
+                                                                            id="rt"
+                                                                            className="accordion-collapse collapse show  d-lg-block"
+                                                                            aria-labelledby="rt "
+                                                                            data-bs-parent="#desTabContent"
+                                                                        >
+                                                                            <p
+                                                                                className="productDetailShortdesOne"
+                                                                                dangerouslySetInnerHTML={{
+                                                                                    __html: sanitizedText,
+                                                                                }}
+                                                                            ></p>
+                                                                            {/* <p className="productDetailShortdes">
+                                              {sanitizedText}
+                                            </p> */}
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div
+                                                                        id="tc"
+                                                                        className={`desc-tabBG tab-pane fade accordion-item text-alignment manage-text ${activeTabNew === "tc"
+                                                                            ? "active show"
+                                                                            : "hide"
+                                                                            }`}
+                                                                    >
+                                                                        <div
+                                                                            id="tc"
+                                                                            className="accordion-collapse collapse show  d-lg-block"
+                                                                            aria-labelledby="tc "
+                                                                            data-bs-parent="#desTabContent"
+                                                                        >
+                                                                            <p
+                                                                                className="productDetailShortdesOne"
+                                                                                dangerouslySetInnerHTML={{
+                                                                                    __html: sanitizedTextTwo,
+                                                                                }}
+                                                                            >
+                                                                                {/* {sanitizedTextTwo} */}
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {/* NEW three tabs added end */}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
